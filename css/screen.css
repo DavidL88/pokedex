@@ -1,0 +1,56 @@
+.screen-border {
+    padding: 1.5rem;
+    padding-block-end: 0.875rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 2rem 100%, 0 calc(100% - 2.75rem));
+    box-sizing: border-box;
+}
+
+.screen-safeArea {
+    padding: 1rem;
+    background-color: #8db9dc;
+    border-radius: .25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 10rem;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.screen-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block-start: 0.875rem;
+    position: relative;
+}
+
+.screen-button .button {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.button::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    right: 2rem;
+}
+
+.fa-bars {
+    position: absolute;
+    right: 0;
+    color: var(--secondary);
+}
+
+::after, ::before {
+    box-sizing: border-box;
+}
