@@ -15,7 +15,6 @@
     border-end-start-radius: .5rem;
     box-sizing: border-box;
     clip-path: polygon(0 4.75rem, 70% 3.25rem, 100% 3.25rem, 100% 100%, 0 100%);
-
 }
 
 .cover-back {
@@ -37,4 +36,14 @@
     display: flex;
     border-end-end-radius: .5rem;
     border-inline-start: .25rem solid #ba1120;
+}
+.img {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    padding-block-start: 9.375rem;
+    padding-block-end: 1rem;
+    margin: auto;
 }
