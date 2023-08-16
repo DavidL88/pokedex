@@ -39,7 +39,7 @@ async function handlePrevPokemon() {
 
 async function handleRandomPokemon() {
     const id = Math.floor(Math.random() * (898 - 1) + 1);
-    activePokemon = await setPokemon(id);
+    activePokemon = await setPokemon(id)
 }
 
 let activeSprite = 0 
