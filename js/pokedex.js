@@ -51,7 +51,16 @@ function speech(text) {
 }
 const $mega = document.querySelector("#random-pokemon");
 $mega.addEventListener("click", () => {
-  speech(text);
+  speech();
+});
+
+const stopSpeech = document.getElementById("stop");
+let speechSynth = window.speechSynthesis;
+
+stopSpeech.addEventListener("click", () => {
+  $light.classList.remove("is-animated");
+  currentUtterance = null;
+  speechSynth.cancel();
 });
 
 export async function findPokemon(id) {
