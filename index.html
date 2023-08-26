@@ -1,94 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <title>Pokédex</title>
-  <meta property="og:title" content="Pokédex"/>
-  <meta property="og:type" content="Animation"/>
-  <meta property="og:description" content="Busca a un pokémon para obtener todas sus stadísticas"/>
-  <meta property="og:url" content="https://thespectacularspiderman.netlify.app"/>
-  <meta property="og:image" content="https://miro.medium.com/v2/resize:fit:2000/1*2k_dMSfUIfPrWCPBaPYWPA.png"/>
-  <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-  <link rel="manifest" href="./favicon//manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-</head>
-<body>
-  <main class="pokedex" id="pokedex" tabindex="0">
-    <section class="pokedex-main" aria-label="Información general del Pokémon">
-      <div class="header-shadow">
-        <div class="header">
-          <span class="light is-big is-blastoise" id="light"></span>
-          <span class="light is-charmander"></span>
-          <span class="light is-pikachu"></span>
-          <span class="light is-bulbasaur"></span>
-        </div>
-      </div>
-      <div class="screen">
-        <div class="screen-border">
-          <div class="screen-safeArea" id="screen">
-            <img src="" alt="" id="image">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Pokédex</title>
+    <meta property="og:title" content="Pokédex" />
+    <meta property="og:type" content="Animation" />
+    <meta
+      property="og:description"
+      content="Busca a un pokémon para obtener todas sus stadísticas"
+    />
+    <meta
+      property="og:url"
+      content="https://thespectacularspiderman.netlify.app"
+    />
+    <meta
+      property="og:image"
+      content="https://miro.medium.com/v2/resize:fit:2000/1*2k_dMSfUIfPrWCPBaPYWPA.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon//manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <main class="pokedex" id="pokedex" tabindex="0">
+      <section
+        class="pokedex-main"
+        aria-label="Información general del Pokémon"
+      >
+        <div class="header-shadow">
+          <div class="header">
+            <span class="light is-big is-blastoise" id="light"></span>
+            <span class="light is-charmander"></span>
+            <span class="light is-pikachu"></span>
+            <span class="light is-bulbasaur"></span>
           </div>
-          <div class="screen-button">
-            <span class="button"></span>
-            <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+        </div>
+        <div class="screen">
+          <div class="screen-border">
+            <div class="screen-safeArea" id="screen">
+              <img src="" alt="" id="image" />
+            </div>
+            <div class="screen-button">
+              <span class="button"></span>
+              <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="actions">
-        <div class="variants">
-          <span class="buttonBig" id="random-pokemon"></span>
-          <span class="buttonSmall"></span>
+        <div class="actions">
+          <div class="variants">
+            <span class="buttonBig" id="random-pokemon"></span>
+            <span class="buttonSmall"></span>
+          </div>
+          <form role="search" id="form" class="search">
+            <input
+              type="text"
+              name="id"
+              placeholder="¿Quién es ese pokémon?"
+              autocomplete="off"
+            />
+          </form>
+          <div class="description">
+            <p id="description">
+              Busca a un pokémon para obtener todas sus características
+            </p>
+          </div>
+          <div class="navigation">
+            <button
+              id="next-pokemon"
+              class="navigation-right"
+              aria-label="Siguiente pokémon"
+            ></button>
+            <button
+              id="prev-pokemon"
+              class="navigation-left"
+              aria-label="Pokémon Anterior"
+            ></button>
+            <button
+              id="next-image"
+              class="navigation-down"
+              aria-label="Siguiente imagén del pokémon"
+            ></button>
+            <button
+              id="prev-image"
+              class="navigation-up"
+              aria-label="Imagén anterior del pokémon"
+            ></button>
+          </div>
         </div>
-        <form role="search" id="form" class="search">
-          <input type="text" name="id" placeholder="¿Quién es ese pokémon?" autocomplete="off">
-        </form>
-        <div class="description">
-          <p id="description">Busca a un pokémon para obtener todas sus características</p>
-        </div>
-        <div class="navigation">
-          <button id="next-pokemon" class="navigation-right" aria-label="Siguiente pokémon"></button>
-          <button id="prev-pokemon" class="navigation-left" aria-label="Pokémon Anterior"></button>
-          <button id="next-image" class="navigation-down" aria-label="Siguiente imagén del pokémon"></button>
-          <button id="prev-image" class="navigation-up" aria-label="Imagén anterior del pokémon"></button>
+      </section>
+      <div class="cover-front">
+        <div class="img">
+          <img src="./images/pokeball.png" width="300" height="300" />
         </div>
       </div>
-    </section>
-    <div class="cover-front">
-      <div class="img">
-        <img src="./images/pokeball.png" width="300" height="300">
-      </div>
-    </div>  
-    <section class="cover-back" aria-label="Estadísticas del Pokémon">
-      <div class="stats">
-        <canvas id="stats" width="200" height="200"></canvas>
-      </div>
-    </section>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.min.js"></script>
-  <script src="./js/index.js" type="module" ></script>
-</body>
+      <section class="cover-back" aria-label="Estadísticas del Pokémon">
+        <div class="stats">
+          <canvas id="stats" width="200" height="200"></canvas>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
 </html>
-
-
-
